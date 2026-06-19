@@ -60,7 +60,7 @@ export default function Hero() {
               </p>
               
               <p className="text-base sm:text-lg text-slate-300 font-sans-telugu max-w-2xl mb-8">
-                {TEACHER_SUBTITLE} • యానమడల, రామచంద్రపురం గ్రామీణ మరియు పట్టణ ప్రాంతాల్లో ఎందరో విద్యార్థుల బంగారు భవిష్యత్తుకు మార్గదర్శకులు.
+                {TEACHER_SUBTITLE} • యనమదల, రామచంద్రపురం గ్రామీణ మరియు పట్టణ ప్రాంతాల్లో ఎందరో విద్యార్థుల బంగారు భవిష్యత్తుకు మార్గదర్శకులు.
               </p>
             </motion.div>
 

@@ -15,7 +15,7 @@ export const TEACHER_SUBTITLE = "27+ సంవత్సరాల విశిష
 export const CONTACT_INFO = {
   phone: "8688619646",
   email: "challasastry7@gmail.com",
-  location: "యానమడల, రామచంద్రపురం, ఆంధ్రప్రదేశ్",
+  location: "యనమదల, రామచంద్రపురం, ఆంధ్రప్రదేశ్",
   locationEn: "Yanamadala, Ramachandrapuram, Andhra Pradesh",
 };
 
