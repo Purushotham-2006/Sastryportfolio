@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@300;400;500;600;700&family=Noto+Serif+Telugu:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-serif-telugu: "Noto Serif Telugu", "Noto Serif", Georgia, serif;
+  --font-sans-telugu: "Noto Sans Telugu", "Noto Sans", sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --color-brand-blue: #0f172a;
+  --color-brand-gold: #d4af37;
+  --color-brand-gold-dark: #b89020;
+  --color-brand-gold-light: #f3e5ab;
+  --color-brand-ivory: #f8f8f8;
+}
+
+.gold-border {
+  border-color: #d4af37;
+}
+
+.navy-bg {
+  background-color: #0f172a;
+}
+
+.gold-text {
+  color: #d4af37;
+}
+
+.divider-line {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #d4af37, transparent);
+}
+
+.calligraphy-bg {
+  background-image: radial-gradient(#d4af37 0.5px, transparent 0.5px);
+  background-size: 16px 16px;
+  opacity: 0.1;
+}
+
+@layer utilities {
+  .bg-传统花纹 {
+    background-image: radial-gradient(var(--color-brand-gold) 0.5px, transparent 0.5px), radial-gradient(var(--color-brand-gold) 0.5px, transparent 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    opacity: 0.15;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Custom smooth scroll bar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a10;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #0f172a50;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4af37;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b89020;
+}
+
+/* Print Styling for PDF Resume Generation */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12px !important;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block !important;
+  }
+
+  .print-page-break {
+    page-break-before: always;
+  }
+
+  /* Force background colors to print */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+/* Telugu Typography fine adjustments */
+.telugu-title {
+  font-family: var(--font-serif-telugu);
+  line-height: 1.4;
+}
+
+.telugu-body {
+  font-family: var(--font-sans-telugu);
+  line-height: 1.8;
+}
+
+/* Shimmer overlay animation on gold buttons */
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+.shimmer-effect::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.25) 20%,
+    rgba(255, 255, 255, 0.5) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmer 3s infinite;
+}
+
